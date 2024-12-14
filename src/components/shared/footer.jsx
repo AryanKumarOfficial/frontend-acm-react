@@ -42,7 +42,7 @@ export default function Footer() {
                             <h3 className="text-lg font-medium text-balance">Contact</h3>
                             <ul className="text-base text-muted-foreground list-none pl-0">
                                 <li className="sm:text-right">
-                                    <a href="deepshikhapatel@oriental.ac.in" className="hover:underline">
+                                    <a href="mailto:deepshikhapatel@oriental.ac.in" className="hover:underline">
                                         deepshikhapatel@oriental.ac.in
                                     </a>
                                 </li>
