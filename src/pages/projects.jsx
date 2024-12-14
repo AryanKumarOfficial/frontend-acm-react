@@ -8,6 +8,7 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
+import {Img} from "react-image";
 
 const projects = () => {
     const data = {
@@ -61,6 +62,7 @@ const projects = () => {
                 <div className="mt-20">
                     <div className="font-bold mb-5 text-3xl">Projects</div>
                     <dl className="space-y-16 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-16 sm:space-y-0 lg:gap-x-10">
+
                         {data.projects.map((faq, i) => (
                             <Link
                                 key={i}
@@ -68,14 +70,16 @@ const projects = () => {
                             >
                                 <Card
                                     key={i}
-                                    className="shadow-xl bg-cover relative z-0 rounded-lg transition-all duration-300 hover:scale-105 "
+                                    className="shadow-xl bg-cover relative z-0 rounded-lg transition-all duration-300 hover:scale-105"
                                 >
 
-                                    <image width={300} height={300} src={`/${faq.short}.png`} alt="image description"
-                                           className='w-full h-full'/>
+                                    <Img width={300} height={300}
+                                         src={[`/${faq.short}.png`, `/${faq.short}.jpeg`]}
+                                        // srcSet={`/${faq.short}.png` || `/${faq.short}.jpeg`}
+                                         alt="image description" className='w-full h-full' quality={100}/>
                                     <CardHeader
-                                        className="flex flex-row items-center justify-between space-y-1"></CardHeader>
-                                    <CardContent className=""></CardContent>
+                                        className="flex flex-row items-center justify-between space-y-1 font-semibold">{faq.title}</CardHeader>
+                                    <CardContent className="">{faq.description}</CardContent>
                                 </Card>
 
                             </Link>

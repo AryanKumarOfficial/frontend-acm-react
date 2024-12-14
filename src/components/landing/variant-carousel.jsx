@@ -20,7 +20,7 @@ export default function VariantCarousel() {
                 <div className="pt-4"></div>
             </div>
 
-            <Link href="/events/git">
+            <Link to="/events/git">
                 <div
                     className="rounded-lg transition-all duration-300 hover:scale-105 p-2 shadow-md hover:shadow-xl dark:shadow-md dark:hover:shadow-xl hover:dark:shadow-cyan-300/50 dark:shadow-cyan-300/50">
                     <Card className="p-20 lg:p-36 bg-[url('../public/git.jpg')] bg-cover relative z-0">
@@ -31,7 +31,7 @@ export default function VariantCarousel() {
                 </div>
             </Link>
 
-            <Link href="/events/blockchain">
+            <Link to="/events/blockchain">
                 <div
                     className="transition-all hidden sm:block duration-300 hover:scale-105 p-2 shadow-md hover:shadow-xl dark:shadow-md dark:hover:shadow-xl hover:dark:shadow-cyan-300/50 dark:shadow-cyan-300/50">
                     <Card className="p-20 lg:p-36 bg-[url('../public/blockchain.jpg')] bg-cover relative z-0">
