@@ -2,8 +2,8 @@
 
 import React from "react";
 import {useInView} from "framer-motion";
-import {Card, CardContent, CardHeader} from "./components/ui/card"; // Update the path based on your Vite project structure
-import Image from "./components/Image"; // Replace with a standard image component
+import {Card, CardContent, CardHeader} from "@/components/ui/card.jsx"; // Update the path based on your Vite project structure
+import {Img} from "react-image"; // Replace with a standard image component
 import {Link} from "react-router-dom"; // Use React Router for navigation
 
 export default function Home() {
@@ -57,7 +57,7 @@ export default function Home() {
                                     key={i}
                                     className="shadow-xl bg-cover relative z-0 rounded-lg transition-all duration-300 hover:scale-105"
                                 >
-                                    <Image
+                                    <Img
                                         width={300}
                                         height={300}
                                         src={`/${event.short}.jpg`}

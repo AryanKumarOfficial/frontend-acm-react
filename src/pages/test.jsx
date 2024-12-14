@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Image from 'react-image';
+import {Img} from 'react-image';
 
 const getEvents = async () => {
     const res = await fetch('http://localhost:3001/api/events', {
@@ -46,7 +46,7 @@ export default function EventsPage() {
                 {events.map((event) => (
                     <div key={event.title} className="bg-white shadow-md rounded-lg overflow-hidden">
                         <div className="relative w-full h-48">
-                            <Image
+                            <Img
                                 src={event.imageUrl}
                                 alt={event.title}
                                 style={{objectFit: 'cover', width: '100%', height: '100%'}}
