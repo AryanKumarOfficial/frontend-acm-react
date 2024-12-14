@@ -4,14 +4,14 @@ import {
     CardContent,
     CardHeader
 } from "@/components/ui/card";
-import Link from "next/link";
+import {Link} from "react-router-dom";
 
 export default function VariantCarousel() {
     return (
         <div className="flex lg:flex-row flex-col gap-10">
             <div
                 className="transition-all duration-300 hover:scale-105 p-2 shadow-md hover:shadow-xl dark:shadow-md dark:hover:shadow-xl hover:dark:shadow-cyan-300/50 dark:shadow-cyan-300/50">
-                <Link href="/events/ai">
+                <Link to="/events/ai">
                     <Card className="p-20 lg:p-36 bg-[url('../public/ai.jpg')] bg-cover relative z-0">
                         <CardHeader className="flex flex-row items-center justify-between space-y-1 pb-2"/>
                         <CardContent/>

@@ -1,5 +1,6 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import VariantCarousel from "@/components/landing/variant-carousel.jsx";
 
 const IntroText = () => {
   const FADE_DOWN_ANIMATION_VARIANTS = {
@@ -55,6 +56,7 @@ const IntroText = () => {
                 <h1 className="text-2xl font-bold tracking-tight sm:text-4xl mb-1">
                   Events
                 </h1>
+                <VariantCarousel />
               </div>
             </motion.div>
           </AnimatePresence>
