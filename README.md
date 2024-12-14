@@ -1,8 +1,21 @@
-# React + Vite
+# OIST ACM Frontend React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the OIST ACM website. It is built using React and Vite with tailwindcss.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+```bash
+    yarn 
+```
+
+## Development
+
+```bash
+    yarn dev
+```
+
+## Build
+
+```bash
+    yarn build
+```
