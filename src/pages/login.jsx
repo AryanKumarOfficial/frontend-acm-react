@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
@@ -17,7 +17,7 @@ const LoginPage = () => {
     const handleLogin = (e) => {
         e.preventDefault();
         // Handle login functionality here (e.g., sending API request)
-        console.log('Logging in with:', { email, password });
+        console.log('Logging in with:', {email, password});
     };
 
     return (
@@ -42,7 +42,7 @@ const LoginPage = () => {
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
-                            className="mt-1 p-2 w-full border rounded-md dark:bg-gray-700 dark:text-white"
+                            className="mt-1 p-2 w-full border rounded-md bg-white text-gray-700 dark:bg-gray-700 dark:text-white"
                             placeholder="Enter your email"
                         />
                     </div>
