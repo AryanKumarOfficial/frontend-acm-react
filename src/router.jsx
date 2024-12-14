@@ -51,7 +51,7 @@ export const Router = createBrowserRouter([
                 element: <Projects/>
             },
             {
-                path: "/projects/:slug",
+                path: "/projects/:slugs",
                 element: <Project/>
             },
             {

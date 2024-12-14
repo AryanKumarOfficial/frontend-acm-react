@@ -8,6 +8,8 @@ import {
     CardTitle,
 } from "@/components/ui/card";
 import {useParams} from "react-router-dom";
+import {Img} from "react-image";
+import {useEffect} from "react";
 // import { Separator } from "@/components/ui/separator"
 
 const projects = () => {
@@ -72,13 +74,13 @@ const projects = () => {
                             >
                                 <Card
                                     className=" shadow-2xl rounded-xl bg-cover relative z-0 transition-all duration-300 hover:scale-105">
-                                    <image
+                                    <Img
                                         width={500}
                                         height={200}
-                                        src={`/${params.slugs}.png`}
+                                        src={[`/${params.slugs}.png`, `/${params.slugs}.jpeg`]}
                                         alt="image description"
                                         className="w-full h-full"
-                                        // quality={100}
+                                        quality={100}
                                     />
                                     {/* <CardHeader className="flex flex-row items-center justify-between space-y-1 pb-2"></CardHeader> */}
                                     {/* <CardContent></CardContent> */}
