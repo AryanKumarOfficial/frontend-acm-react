@@ -1,19 +1,35 @@
-import {useState} from "react";
+"use client";
 
-export function useToast() {
-    const [toasts, setToasts] = useState([]);
+import {
+    Toast,
+    ToastClose,
+    ToastDescription,
+    ToastProvider,
+    ToastTitle,
+    ToastViewport,
+} from "@/components/ui/toast";
+import {useToast} from "@/components/ui/use-toast";
 
-    const addToast = (toast) => {
-        setToasts((prevToasts) => [...prevToasts, toast]);
-    };
+export function Toaster() {
+    const {toasts} = useToast();
 
-    const removeToast = (id) => {
-        setToasts((prevToasts) => prevToasts.filter((toast) => toast.id !== id));
-    };
-
-    return {
-        toasts,
-        addToast,
-        removeToast,
-    };
+    return (
+        <ToastProvider>
+            {toasts.map(function ({id, title, description, action, ...props}) {
+                return (
+                    <Toast key={id} {...props}>
+                        <div className="grid gap-1">
+                            {title && <ToastTitle>{title}</ToastTitle>}
+                            {description && (
+                                <ToastDescription>{description}</ToastDescription>
+                            )}
+                        </div>
+                        {action}
+                        <ToastClose/>
+                    </Toast>
+                );
+            })}
+            <ToastViewport/>
+        </ToastProvider>
+    );
 }
