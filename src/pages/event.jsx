@@ -53,8 +53,9 @@ const slug = () => {
 
                                     <Card
                                         className=" shadow-2xl rounded-xl bg-cover relative z-0 transition-all duration-300 hover:scale-105">
-                                        <Img width={500} height={200} src={`/${params.slug}.jpg`}
-                                               alt="image description" className='w-full h-full' quality={100}/>
+                                        <Img width={500} height={200}
+                                             src={[`/${params.slug}.jpg`, `/${params.slug}.JPG`]}
+                                             alt="image description" className='w-full h-full' quality={100}/>
                                         <CardHeader
                                             className="flex flex-row items-center justify-between space-y-1 pb-2">
                                         </CardHeader>

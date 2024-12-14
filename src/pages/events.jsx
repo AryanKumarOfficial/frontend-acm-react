@@ -60,7 +60,7 @@ export default function Home() {
                                     <Img
                                         width={300}
                                         height={300}
-                                        src={`/${event.short}.jpg`}
+                                        src={[`/${event.short}.jpg`, `/${event.short}.JPG`]}
                                         alt="image description"
                                         className="w-full h-full"
                                         quality={100}
