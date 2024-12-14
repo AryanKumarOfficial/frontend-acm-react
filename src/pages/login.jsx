@@ -1,16 +1,12 @@
-"use client"; // This ensures the file is treated as a client-side component
-// src/components/LoginPage.tsx
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 
 const LoginPage = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [darkMode, setDarkMode] = useState(false);
 
     // Load the dark mode preference from localStorage
     useEffect(() => {
         const savedMode = localStorage.getItem('darkMode') === 'true';
-        setDarkMode(savedMode);
         if (savedMode) {
             document.documentElement.classList.add('dark');
         } else {
@@ -18,23 +14,10 @@ const LoginPage = () => {
         }
     }, []);
 
-    const handleDarkModeToggle = () => {
-        setDarkMode((prevMode) => {
-            const newMode = !prevMode;
-            localStorage.setItem('darkMode', newMode.toString());
-            if (newMode) {
-                document.documentElement.classList.add('dark');
-            } else {
-                document.documentElement.classList.remove('dark');
-            }
-            return newMode;
-        });
-    };
-
     const handleLogin = (e) => {
         e.preventDefault();
         // Handle login functionality here (e.g., sending API request)
-        console.log('Logging in with:', {email, password});
+        console.log('Logging in with:', { email, password });
     };
 
     return (
@@ -98,3 +81,5 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
+
